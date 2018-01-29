@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+        .FizzBuzz {
+            color: green;
+        }
+        .Fizz {
+            color: yellow;
+        }
+        .Buzz {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div th:each= "PerLine: ${model.finaloutput}">
+    <div th:PerLine.value="'FizzBuzz'" th:class="'FizzBuzz'">PerLine.value</div>
+    <div th:PerLine.value="'Fizz'" th:class="'Fizz'">PerLine.value</div>
+    <div th:PerLine.value="'Buzz'" th:class="'Buzz'">PerLine.value</div>
+    <div th:unless PerLine.value="'Buzz'" th:value ="${PerLine.value}">PerLine.value</div></div>
+
+
+
+
+</body>
+</html>
